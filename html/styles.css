@@ -1,0 +1,186 @@
+/* Feito por Felipe dos Reis Rocha em 19/08/2024 */
+
+/* Estilo geral do corpo da página */
+body {
+    background-color: #E5C4BD;
+    height: 100%;
+    margin: 0;
+}
+
+/* Estilo para a imagem exibida */
+#displayImg {
+    width: 100px;
+    height: 100px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    left: 37%;
+    position: relative;
+}
+
+/* Estilo para o texto e contadores */
+span, #tentativas, #tries {
+    font-size: 12px;
+    font-weight: bold;
+    font-style: italic;
+}
+
+/* Estilo para o título secundário */
+h2 {
+    font-size: 20px;
+}
+
+/* Container central do jogo */
+.central {
+    border: solid 1px black;
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #FFEAE4;
+    text-align: center;
+    box-shadow: 5px 10px #00000087;
+    border-radius: 6px;
+    padding: 4px;
+}
+
+/* Estilo para a instrução de escolha */
+#escolha {
+    font-weight: bold;
+}
+
+/* Animação para o título do jogo */
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-30px);
+    }
+    60% {
+        transform: translateY(-15px);
+    }
+}
+
+/* Estilo para o título do jogo */
+h1 {
+    text-shadow: 1px 1px rgba(0, 0, 0, 0.267);
+    color: #E33390;
+    font-size: 60px;
+    animation: bounce 2s infinite;
+}
+
+/* Estilo para os botões */
+button {
+    background-color: #E33390;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+/* Estilo para o botão ao passar o mouse */
+button:hover {
+    background-color: #bf2c7a;
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+/* Estilo para o botão quando pressionado */
+button:active {
+    background-color: #691944;
+    transform: scale(1);
+}
+
+/* Estilo para o seletor de opções */
+select {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 9px;
+    font-weight: bold;
+    cursor: pointer;
+    appearance: none;
+    color: #333;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+/* Estilo para o seletor ao receber foco */
+select:focus {
+    border-color: #E33390;
+    box-shadow: 0 0 5px #ff39a3;
+    outline: none;
+}
+
+/* Estilo para as opções do seletor */
+option {
+    cursor: pointer;
+}
+
+/* Estilo para os contadores de resultados */
+.contador {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    background-color: #FCF1EE;
+    text-align: center;
+    line-height: 100px;
+    margin: 5px;
+    border: 2px solid #a2a2a2;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+/* Estilo para o modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Estilo para o conteúdo do modal */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo para o botão de fechar do modal */
+.fechar {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+/* Estilo para o botão de fechar ao passar o mouse */
+.fechar:hover,
+.fechar:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Estilo para organizar contadores de jogadas */
+.jogos {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}

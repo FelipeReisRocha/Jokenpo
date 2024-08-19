@@ -1,0 +1,77 @@
+<!-- Feito por Felipe dos Reis Rocha em 19/08/2024 -->
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Jokenpô</title>
+    <script src="script.js"></script>
+</head>
+
+<body>
+
+    <!-- Container principal do jogo -->
+    <div class="central">
+        <!-- Título do jogo -->
+        <h1>Jokenpô</h1>
+
+        <!-- Instrução para o usuário -->
+        <p id="escolha">Choose your character</p>
+
+        <!-- Área para exibição da imagem escolhida -->
+        <div id="imageContainer">
+            <img id="displayImg" src="" alt="Imagem" style="display:none;">
+        </div>
+
+        <!-- Seletor para escolha -->
+        <div>
+            <select id="imgslc" onchange="mudarimg()">
+                <option value="">Choose your weapon</option>
+                <option value="img/pedra.webp">Rock</option>
+                <option value="img/paper.png">Paper</option>
+                <option value="img/tesoura.png">Scissor</option>
+            </select>
+        </div>
+
+        <!-- Botão para iniciar o jogo -->
+        <button onclick="jogar()">Play</button>
+        <br>
+
+        <!-- Resultados do jogo -->
+        <h2>Result</h2>
+        <span></span>
+        <div class="jogos">
+            <!-- Contador de jogadas e tentativas restantes -->
+            <p id="tentativas">Plays: 0</p>
+            <p id="tries">Tries: 10</p>
+        </div>
+
+        <!-- Placar do jogo -->
+        <div id="placar">
+            <p id="vitorias" class="contador">Wins: 0</p>
+            <p id="derrotas" class="contador">Defeats: 0</p>
+            <p id="empates" class="contador">Draws: 0</p>
+        </div>
+    </div>
+
+    <!-- Modal com as regras do jogo -->
+    <div id="regraModal" class="modal">
+        <div class="modal-content">
+            <!-- Botão para fechar o modal -->
+            <span class="fechar" onclick="fecharModal()">&times;</span>
+            <h2>JokenPo Rules</h2>
+            <p>Welcome to JokenPo created by me! Here are the rules:</p>
+            <ul>
+                <li><strong>Rock</strong> beats <strong>Scissor</strong></li>
+                <li><strong>Scissor</strong> beats <strong>Paper</strong></li>
+                <li><strong>Paper</strong> beats <strong>Rock</strong></li>
+                <li><strong>You</strong> have <strong>10</strong> tries</li>
+            </ul>
+            <p>Make your choice and click "Play" to see if you win, lose, or draw against the computer!</p>
+        </div>
+    </div>
+</body>
+
+</html>
